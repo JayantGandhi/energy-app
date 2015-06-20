@@ -1,10 +1,17 @@
-.navigation {
-  width: 100%;
+.nav-wrap {
   overflow: hidden;
   position: fixed;
   top: -20rem;
-  height: 20rem;
+  width: 100%;
+  height: 25rem;
+  transition: top 1s ease;
   background-color: $utility-color;
+  z-index: 999;
+}
+
+.navigation {
+  width: 100%;
+  height: 20rem;
   font-size: 1.6rem;
 
   a {
@@ -12,33 +19,32 @@
   }
 }
 
-.navigation {
-  transition: top 1s ease;
-}
-
 #mainNav:target {
   top: 0;
+
+  .open-menu-button {
+    visibility: hidden;
+    transform: rotate(-180deg);
+    transition: transform 500ms ease-in-out,
+                visibility 0s linear;
+    transition-delay: 0s, 500ms;
+  }
+
+  .close-menu-button {
+    visibility: visible;
+    transition: visibility 0s linear;
+    transition-delay: 500ms;
+  }
 }
 
 #mainNav:target + .page-wrap {
   top: 20rem;
   transition: top 1s ease;
-
-  .open-menu-button {
-    display: none;
-  }
-
-  .close-menu-button {
-    display: inline-block;
-  }
 }
 
 .header-bar {
   height: 5rem;
   width: 100%;
-  position: absolute;
-  top: 0;
-  background-color: $utility-color;
 
   .logo {
     display: inline-block;
@@ -53,14 +59,20 @@
     a {
       text-decoration: none;
       font-size: 2em;
+      position: absolute;
+      right: 0;
     }
   }
 
   .open-menu-button {
-    display: inline-block;
+    visibility: visible;
+    transition: transform 500ms ease-in-out,
+                visibility 0s linear;
+    transition-delay: 0s, 0ms;
   }
 
   .close-menu-button {
-    display: none;
+    visibility: hidden;
+
   }
 }

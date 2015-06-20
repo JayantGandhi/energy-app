@@ -8,10 +8,12 @@
   </head>
   <body>
 
-    <%= render partial: 'shared/nav' %>
+    <div id="mainNav" class="nav-wrap">
+      <%= render partial: 'shared/nav' %>
+      <%= render partial: 'shared/header' %>
+    </div>
 
     <div class="page-wrap">
-      <%= render partial: 'shared/header' %>
       <div class="content-container">
         <%= yield %>
       </div>
