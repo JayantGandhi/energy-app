@@ -18,10 +18,24 @@ body {
   width: 100%;
   position: relative;
   min-width: 100rem;
-  left: 0;
-  transition: left 1s ease;
+  top: 0;
+  transition: top 1s ease;
+  font-size: 1.6rem;
+}
+
+.content-container {
+  padding-top: 5rem;
 }
 
 .box {
   display: flex;
+}
+
+a {
+  color: $link-color;
+  line-height: inherit;
+
+  &:hover {
+    color: $link-hover;
+  }
 }

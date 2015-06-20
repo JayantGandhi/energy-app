@@ -22,6 +22,7 @@
 <glyph glyph-name="left-open-big" unicode="&#xe80d;" d="m452-20q26-26 0-48-26-26-48 0l-392 394q-24 24 0 50l392 394q22 26 48 0 26-22 0-48l-358-372z" horiz-adv-x="465" />
 <glyph glyph-name="right-open-big" unicode="&#xe80e;" d="m13-20l358 370-358 372q-26 26 0 48 26 26 48 0l392-394q24-26 0-50l-392-394q-22-26-48 0-26 22 0 48z" horiz-adv-x="465" />
 <glyph glyph-name="up-open-big" unicode="&#xe80f;" d="m804 130l-372 358-370-358q-26-22-50 0-24 24 0 50l396 390q26 26 48 0l396-390q24-26 0-50-26-22-48 0z" horiz-adv-x="864" />
+<glyph glyph-name="ellipsis-vert" unicode="&#xe810;" d="m214 154v-108q0-22-15-37t-38-16h-107q-23 0-38 16t-16 37v108q0 22 16 38t38 15h107q22 0 38-15t15-38z m0 285v-107q0-22-15-38t-38-15h-107q-23 0-38 15t-16 38v107q0 23 16 38t38 16h107q22 0 38-16t15-38z m0 286v-107q0-22-15-38t-38-16h-107q-23 0-38 16t-16 38v107q0 22 16 38t38 16h107q22 0 38-16t15-38z" horiz-adv-x="214.3" />
 </font>
 </defs>
 </svg>

@@ -1,22 +1,66 @@
 .navigation {
-
-  /* Collapsed */
-  width: 30rem;
+  width: 100%;
   overflow: hidden;
   position: fixed;
-  top: 0;
-  left: -30rem;
-  height: 100%;
+  top: -20rem;
+  height: 20rem;
+  background-color: $utility-color;
+  font-size: 1.6rem;
+
+  a {
+    color: $white;
+  }
 }
 
 .navigation {
-  transition: left 1s ease;
+  transition: top 1s ease;
 }
+
 #mainNav:target {
-  left:0;
+  top: 0;
 }
 
 #mainNav:target + .page-wrap {
-  left: 30rem;
-  transition: left 1s ease;
+  top: 20rem;
+  transition: top 1s ease;
+
+  .open-menu-button {
+    display: none;
+  }
+
+  .close-menu-button {
+    display: inline-block;
+  }
+}
+
+.header-bar {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: $utility-color;
+
+  .logo {
+    display: inline-block;
+  }
+
+  .menu {
+    display: inline-block;
+    line-height: 5rem;
+    right: 0;
+    position: absolute;
+
+    a {
+      text-decoration: none;
+      font-size: 2em;
+    }
+  }
+
+  .open-menu-button {
+    display: inline-block;
+  }
+
+  .close-menu-button {
+    display: none;
+  }
 }
