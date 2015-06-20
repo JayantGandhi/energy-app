@@ -1,0 +1,14 @@
+<div class="content-box">
+  <%= puts '*()*)(*)(*)(*)(*)(*)' %>
+  <%= puts section.length %>
+  <% for article in section %>
+    <%= puts '@#$%^$#$%^&' %>
+    <%= puts article %>
+    <%= puts '@#$%^$#$%^&' %>
+
+    <div class="article-box" style="background-image:url(<%= article.image_url %>)">
+      <h2><%= article.title %></h2>
+      <h3><%= article.subtitle %></h3>
+    </div>
+  <% end %>
+</div>
