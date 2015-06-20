@@ -7,6 +7,8 @@
   transition: top 1s ease;
   background-color: $utility-color;
   z-index: 999;
+  font-size: 1.8rem;
+  color: $white;
 }
 
 .navigation {
@@ -53,14 +55,14 @@
   .menu {
     display: inline-block;
     line-height: 5rem;
+    max-height: 5rem;
     right: 0;
     position: absolute;
 
     a {
       text-decoration: none;
       font-size: 2em;
-      position: absolute;
-      right: 0;
+      color: $black;
     }
   }
 
@@ -73,6 +75,8 @@
 
   .close-menu-button {
     visibility: hidden;
-
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
