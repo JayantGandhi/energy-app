@@ -1,14 +1,26 @@
-<div class="content-box">
-  <%= puts '*()*)(*)(*)(*)(*)(*)' %>
-  <%= puts section.length %>
-  <% for article in section %>
-    <%= puts '@#$%^$#$%^&' %>
-    <%= puts article %>
-    <%= puts '@#$%^$#$%^&' %>
+<% article_scroll = Array.new %>
 
-    <div class="article-box" style="background-image:url(<%= article.image_url %>)">
-      <h2><%= article.title %></h2>
-      <h3><%= article.subtitle %></h3>
-    </div>
+<div class="content-box">
+  <% for article in section %>
+    <% if article.is_cover_story %>
+      <div class="article-box cover-story" style="background-image:url(<%= article.image_url %>)">
+        <div class="overlay">
+          <h2><%= article.title %></h2>
+          <h3><%= article.subtitle %></h3>
+        </div>
+      </div>
+    <% else %>
+      <% article_scroll.push(article) %>
+    <% end %>
   <% end %>
+  <div class="article-scroll">
+    <% for article in article_scroll %>
+      <div class="article-box" style="background-image:url(<%= article.image_url %>)">
+        <div class="overlay">
+          <h2><%= article.title %></h2>
+          <h3><%= article.subtitle %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

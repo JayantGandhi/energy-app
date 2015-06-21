@@ -1,0 +1,37 @@
+.content-box {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+
+  .article-box {
+    width: 50%;
+    height: 50%;
+    float: right;
+    display: inline;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.cover-story {
+      width: 60%;
+      height: 100%;
+      float: left;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: $white;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .article-scroll {
+    overflow-y: scroll;
+    height: 100%;
+    width: 40%;
+  }
+}
