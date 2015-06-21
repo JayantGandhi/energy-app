@@ -1,5 +1,26 @@
-<div class="article-slide">
-  <% for section in @sections %>
-    <%= render partial: 'content_box', locals: {section: section} %>
+<div class="article-slider">
+  <% @sections.each_with_index do |section, index| %>
+    <div class="slide">
+      <%= render partial: 'content_box', locals: {section: section} %>
+      <!-- <div class="arrow-back">
+        <span class="icon-left-open-big"></span>
+      </div>
+      <div class="arrow-next">
+        <span class="icon-right-open-big"></span>
+      </div> -->
+    </div>
   <% end %>
+</div>
+<div class="box home-body">
+  <div class="cell">
+    <a class="twitter-timeline" href="https://twitter.com/BigDataDeclan" data-widget-id="612436388219330560">Tweets by @BigDataDeclan</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+  <div class="cell double link-list">
+    <ul>
+      <% 93.times do %>
+        <li><a href="http://heyyeyaaeyaaaeyaeyaa.com/">CLICK HERE FOR A <em>really</em> INTERESTING <strong>link</strong></a></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

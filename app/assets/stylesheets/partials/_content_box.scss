@@ -35,3 +35,34 @@
     width: 40%;
   }
 }
+
+.article-slider {
+  position: relative;
+
+  .arrow-next {
+    float: right;
+    right: 0;
+  }
+
+  .arrow-back,
+  .arrow-next {
+    bottom: 0;
+    font-size: 7.5rem;
+    font-family: 'fontello';
+    line-height: 10rem;
+    position: absolute;
+    cursor: pointer;
+    color: $white;
+
+    &:before {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      background-color: rgba(255,255,255,0.5);
+      color: $black;
+      transition: background-color 200ms ease, color 200ms ease;
+    }
+  }
+}
