@@ -1,13 +1,9 @@
 <div class="article-slider">
   <% @sections.each_with_index do |section, index| %>
     <div class="slide">
-      <%= render partial: 'content_box', locals: {section: section} %>
-      <!-- <div class="arrow-back">
-        <span class="icon-left-open-big"></span>
-      </div>
-      <div class="arrow-next">
-        <span class="icon-right-open-big"></span>
-      </div> -->
+      <a href="#">
+        <%= render partial: 'content_box', locals: {section: section} %>
+      </a>
     </div>
   <% end %>
 </div>
