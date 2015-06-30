@@ -25,7 +25,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'autoprefixer-rails'
 
+# for easy slideshow
 gem 'slick_rails'
+
+# for easy forms
+gem 'formtastic'
+gem 'cocoon'
+
+# devise for users
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

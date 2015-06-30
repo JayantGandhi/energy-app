@@ -18,3 +18,6 @@ Article.create(vertical: 'Astacology', is_cover_story: true, title: 'Has Donny F
 Article.create(vertical: 'Astacology', title: 'Trix Rabbit Finaly has Trix:', subtitle: '"It\'s Alright..."', image_url: 'https://kookyquestions.files.wordpress.com/2011/03/trix.jpg')
 Article.create(vertical: 'Astacology', title: 'Is your refrigerator running?', subtitle: 'if so you should probably go catch it', image_url: 'http://cw15.com//news/features/local-news/images/local_news_stopimg.jpg')
 Article.create(vertical: 'Astacology', title: 'I hope sempai notices me', subtitle: 'Baka', image_url: 'http://www.nerdfit.com/wp-content/uploads/2014/08/xHzNQi3.jpg')
+
+Editor.delete_all
+Editor.create(email: 'admin@example.com', password: 'password')

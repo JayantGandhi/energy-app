@@ -1,0 +1,29 @@
+<div class="editor-form">
+  <%= semantic_form_for @editor, url: {action: :create, id: @editor} do |f| %>
+    <div id="editor_email" class="group">
+      <input type="email" name="editor[email]" value="" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="editor_email">Email*</label>
+    </div>
+    <div id="editor_password" class="group">
+      <input type="password" name="editor[password]" value="" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="editor_password">Password*</label>
+    </div>
+    <div id="editor_password_confirmation" class="group">
+      <input type="password" name="editor[password_confirmation]" value="" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label for="editor_password_confirmation">Confirm Password*</label>
+    </div>
+
+    <%= f.actions do %>
+      <%= f.action :submit, as: :input %>
+      <li class="cancel">
+        <a href="/editor-dashboard">Cancel</a>
+      </li>
+    <%- end -%>
+  <%- end -%>
+</div>

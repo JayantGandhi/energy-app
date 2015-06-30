@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+  resources :editors
+
+  devise_for :editors,
+    controller: {registrations: :editors},
+    path_names: {sign_in: "login", sign_out: "logout", sign_up: "register"}
+
   resources :articles
+
   root 'home#index'
 
-  get 'home/index'
+  get 'editor-dashboard', to: 'editors#dashboard', as: 'editor_dashboard'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
