@@ -2,10 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home-body {
-  max-height: 600px;
+  max-width: 140rem;
+  margin: 0 auto;
 }
 
 .link-list {
-  column-count: 3;
-  column-gap: 2rem;
+  max-height: 60rem;
+  overflow-y: scroll;
+
+  li {
+    list-style: none;
+    border-bottom: 1px dotted $black;
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 1rem;
+
+      .link-title {
+        font-size: 2em;
+      }
+
+      .link-description {
+        display: block;
+        color: $black;
+      }
+
+      &:hover,
+      &:active {
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .link-title {
+          color: $link-hover;
+        }
+      }
+
+      &:visited {
+        .link-title {
+          color: $link-hover;
+        }
+      }
+    }
+  }
 }

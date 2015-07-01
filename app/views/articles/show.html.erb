@@ -1,0 +1,13 @@
+<article>
+  <h1><%= @article.title %></h1>
+  <h2><%= @article.subtitle %></h2>
+
+  <% for section in @article.sections %>
+    <div class="section">
+      <h3><%= section.header %></h3>
+      <div class="section-body">
+        <%= section.body.html_safe %>
+      </div>
+    </div>
+  <% end %>
+</article>

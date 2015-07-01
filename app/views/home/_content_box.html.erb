@@ -4,10 +4,12 @@
   <% for article in section %>
     <% if article.is_cover_story %>
       <div class="article-box cover-story" style="background-image:url(<%= article.image_url %>)">
-        <div class="overlay">
-          <h2><%= article.title %></h2>
-          <h3><%= article.subtitle %></h3>
-        </div>
+        <%= link_to article do %>
+          <div class="overlay">
+            <h2><%= article.title %></h2>
+            <h3><%= article.subtitle %></h3>
+          </div>
+        <% end %>
       </div>
     <% else %>
       <% article_scroll.push(article) %>
@@ -16,10 +18,12 @@
   <div class="article-scroll">
     <% for article in article_scroll %>
       <div class="article-box" style="background-image:url(<%= article.image_url %>)">
-        <div class="overlay">
-          <h2><%= article.title %></h2>
-          <h3><%= article.subtitle %></h3>
-        </div>
+        <%= link_to article do %>
+          <div class="overlay">
+            <h2><%= article.title %></h2>
+            <h3><%= article.subtitle %></h3>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>

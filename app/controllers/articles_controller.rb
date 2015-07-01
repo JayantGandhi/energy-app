@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.
+
   end
 
   def new
@@ -76,5 +76,5 @@ class ArticlesController < ApplicationController
         ],
       )
     end
-  end
+
 end

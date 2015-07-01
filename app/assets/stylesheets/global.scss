@@ -86,7 +86,9 @@ a {
   color: $link-color;
   line-height: inherit;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:visited {
     color: $link-hover;
   }
 }
