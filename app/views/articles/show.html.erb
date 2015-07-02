@@ -1,13 +1,29 @@
-<article>
-  <h1><%= @article.title %></h1>
-  <h2><%= @article.subtitle %></h2>
-
-  <% for section in @article.sections %>
-    <div class="section">
-      <h3><%= section.header %></h3>
-      <div class="section-body">
-        <%= section.body.html_safe %>
+<header>
+    <div class="header-img" style="background-image:url('<%= @article.image_url %>')">
+      <div class="article-header">
+        <h1><%= @article.title %></h1>
+        <h2><%= @article.subtitle %></h2>
+        <div class="icon-down-open-big article-prompt"></div>
       </div>
     </div>
-  <% end %>
+
+    <!-- All content other than the header image is expected to be wrapped in a <div> -->
+
+</header>
+
+<article>
+  <div>
+    <div class="article-title">
+      <h1><%= @article.title %></h1>
+      <h2><%= @article.subtitle %></h2>
+    </div>
+    <% for section in @article.sections %>
+      <div class="section">
+        <h3><%= section.header %></h3>
+        <div class="section-body">
+          <%= section.body.html_safe %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </article>

@@ -1,0 +1,73 @@
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Header is expected to be a 100% width static element with overflow hidden. */
+body > header
+{
+    position: static;
+    width: 100%;
+    margin-top: 10%;
+    overflow: hidden;
+}
+
+/* The introductory image container is expected to be fixed positioned and cover the viewport */
+div.header-img
+{
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The introductory image itself covers the viewport */
+div.header-img
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Content inside the header can be to your liking, but should be absolutely positioned. Here we are assuming all header content (other than the main image) is wrapped in a single <div> */
+body > header > div:not(.header-img)
+{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 99999;
+}
+
+.article-header {
+  position: relative;
+  margin-top: 25vh;
+  text-shadow: 2px 2px $black;
+
+  .article-prompt {
+    color: $white;
+    font-size: 4.2rem;
+    text-align: center;
+    margin-top: 20vh;
+  }
+}
+
+/* Content is expected to be wrapped in an <article> and is initially hidden. */
+article
+{
+    position: relative;
+    margin-top: 32rem;
+    opacity: 0;
+}

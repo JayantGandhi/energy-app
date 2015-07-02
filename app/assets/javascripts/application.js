@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require slick
+//= require velocity.min
+//= require article_intro
 //= require turbolinks
 //= require_tree .

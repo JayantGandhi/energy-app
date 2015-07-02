@@ -1,20 +1,28 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1,
+h2 {
+  text-align: center;
+  color: $white;
+}
+
+h1 {
+  font-size: 7.2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+
 article {
   max-width: 118rem;
 
   h1,
   h2 {
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 4.6rem;
-  }
-
-  h2 {
-    font-size: 3.2rem;
+    color: $black;
   }
 
   h3 {
